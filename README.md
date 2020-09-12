@@ -15,3 +15,9 @@
                                                                                                           
 
 </pre>
+
+Currently the best way to run it is with QEMU or Bochs in 32 bit mode
+
+Compile and test:
+1. make
+2. emu-system-i386 -drive format=raw,file=os-image
