@@ -1,41 +1,14 @@
-const int VIDEO_OFFSET = 0xb8000;
+#include "video.c"
+#include "screen.c"
+#include "string.c"
 
-void CleanScreen();
-void PrintString(const char* str);
-void Prompt();
-
-void main () 
+void main ()
 {
-	CleanScreen();
-	PrintString("# A simple OS bootloader and kernel coded in ASM & C #\0");
+	//ScreenClear();
+	VideoSetFgColor(VCLR_FG_GREEN);
+	ScreenFill();
+	VideoSetFgColor(VCLR_FG_LIGHTCYAN);
+	VideoSetBgColor(VCLR_BG_MAGENTA);
+	StringPrint("# A simple OS bootloader and kernel coded in ASM & C #\0");
 }
 
-void CleanScreen()
-{
-	char* vidMem = (char *)VIDEO_OFFSET;
-	for (int i = 0; i < 80*25; ++i)
-	{
-		vidMem += 2;
-		*vidMem = ' ';
-	}
-}
-
-void PrintString(const char* str)
-{
-	char* vidMem = (char*)VIDEO_OFFSET;
-	
-	int cnt = 0;
-	while(str[cnt] != 0x0)
-	{
-		*vidMem = str[cnt];
-		++cnt;
-		++vidMem;
-		*vidMem = 0x30;
-		++vidMem;
-	}
-}
-
-void Prompt()
-{
-    
-}
