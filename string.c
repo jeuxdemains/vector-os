@@ -18,7 +18,7 @@ void StringResetPos()
 
 void StringPrint(const char* str)
 {
-    //make a check if we are withing the VGA buffer, if not set it up
+    //make a check if we are within the VGA buffer, if not set it up
     if (SCRN_POS < VIDEO_OFFSET || SCRN_POS > VIDEO_OFFSET + (80*25))
         StringResetPos();
 
