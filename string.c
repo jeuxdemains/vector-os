@@ -2,7 +2,7 @@ int SCRN_POS = VIDEO_OFFSET;
 
 void StringSetPos(int x, int y)
 {
-    SCRN_POS = (char*)VIDEO_OFFSET;
+    SCRN_POS = VIDEO_OFFSET;
 
     for (int i = 0; i < x; ++i)
         SCRN_POS += 2;
