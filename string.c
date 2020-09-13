@@ -13,7 +13,7 @@ void StringSetPos(int x, int y)
 
 void StringResetPos()
 {
-    SCRN_POS = (char*)VIDEO_OFFSET;
+    SCRN_POS = VIDEO_OFFSET;
 }
 
 void StringPrint(const char* str)
