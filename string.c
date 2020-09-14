@@ -22,17 +22,17 @@ void StringPrint(const char* str)
     if (SCRN_POS < VIDEO_OFFSET || SCRN_POS > VIDEO_OFFSET + (80*25))
         StringResetPos();
 
-	char* vidMem = (char*)SCRN_POS;
+    char* vidMem = (char*)SCRN_POS;
 
-	int letterIndex = 0;
-	while(str[letterIndex] != 0x0)
-	{
-		*vidMem = str[letterIndex];
-		++letterIndex;
-		++vidMem;
-		*vidMem = VideoGetTeletypeColor();
-		++vidMem;
-	}
+    int letterIndex = 0;
+    while(str[letterIndex] != 0x0)
+    {
+        *vidMem = str[letterIndex];
+        ++letterIndex;
+        ++vidMem;
+        *vidMem = VideoGetTeletypeColor();
+        ++vidMem;
+    }
 }
 
 void StringPrintPos(const char* str, int x, int y)
