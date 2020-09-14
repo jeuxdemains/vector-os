@@ -18,8 +18,8 @@ Compile and test:
 1. make
 2. make run
 
-Remember -- there is no glbic here, there are no standard C functions.
+Remember -- there is no glibc here, there are no standard C functions.
 Everything has to be coded from scratch.
 
 Currently it boots to 16 bit real mode, switches to 32 bit mode, inits the Global Descriptor Table and loads the Kernel.
-Coding a standart library would be priority number 1.
+Coding a standard library would be priority number 1.
