@@ -18,10 +18,10 @@ void ScreenFill()
 
 void ScreenClear()
 {
-	char* vidMem = (char *)VIDEO_OFFSET;
-	for (int i = 0; i < 80*25; ++i)
-	{
-		vidMem += 2;
-		*vidMem = ' ';
-	}
+    char* vidMem = (char *)VIDEO_OFFSET;
+    for (int i = 0; i < 80*25; ++i)
+    {
+        vidMem += 2;
+        *vidMem = ' ';
+    }
 }

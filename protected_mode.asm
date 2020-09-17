@@ -1,7 +1,7 @@
 [bits 16]
 switch_to_pm:
-	cli
-	
+    cli
+
 lgdt [gdt_descriptor]
 
 mov eax, cr0
@@ -12,14 +12,14 @@ jmp CODE_SEG:init_pm
 
 [bits 32]
 init_pm:
-	mov ax, DATA_SEG
-	mov dx, ax
-	mov ss, ax
-	mov es, ax
-	mov fs, ax
-	mov gs, ax
-	
-	mov ebp, 0x90000
-	mov esp, ebp
-	
-	call BEGIN_PM
+    mov ax, DATA_SEG
+    mov dx, ax
+    mov ss, ax
+    mov es, ax
+    mov fs, ax
+    mov gs, ax
+
+    mov ebp, 0x90000
+    mov esp, ebp
+
+    call BEGIN_PM
