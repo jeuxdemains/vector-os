@@ -8,6 +8,9 @@ ___  __ ____   _____/  |_  ___________
            \/     \/
 </pre>
 
+![screenshot-vector](https://user-images.githubusercontent.com/7083803/93932398-c8f15600-fd28-11ea-964c-26710aa75201.png)
+
+
 Vector OS is a small 32 bit operating system coded from scratch in C and Assembler (NASM).
 Probably at some point I will upgrade it to 64 bit. 
 Anyways -- you can fork it, test it, hack it and basically have fun with it in any way you like.
