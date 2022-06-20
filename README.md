@@ -21,7 +21,7 @@ Compile and test:
 1. make
 2. make run
 
-Remember -- there is no glibc here, there are no standard C functions.
+Remember -- there is no libc here, there are no standard C functions.
 Everything has to be coded from scratch.
 
 
